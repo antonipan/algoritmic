@@ -13,6 +13,7 @@ public class Homework2 {
         list.revert();
         System.out.println("----");
         list.print();
+        System.out.println(list.factorial(5));
 
 
     }
@@ -66,6 +67,16 @@ class LinkedList {
         }
         currentNode.next = previosNode;
         previosNode.next = null;
+    }
+
+    public int factorial (int n) {
+        int result;
+        if (n == 1) {
+            return 1;
+        } else {
+            result = n * factorial(n-1);
+            return result;
+        }
     }
 }
 
